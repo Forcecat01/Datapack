@@ -17,7 +17,6 @@
         </parameters>
         <race>HUMANOID</race>
         <sex>MALE</sex>
-        <equipment rhand="4"/> <!-- rhand: Club -->
         <acquire exp="1326" sp="52"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
             <vitals hp="301" hpRegen="2.5" mp="132" mpRegen="1.2"/>
@@ -775,9 +774,9 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="1472"/> <!-- Dreadbane -->
-        <acquire exp="40809" sp="1224"/>
+        <acquire exp="47611" sp="1429"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1498" hpRegen="11" mp="747" mpRegen="2.1"/>
+            <vitals hp="1498.94623198693" hpRegen="11" mp="747.8" mpRegen="2.1"/>
             <attack physical="277.7718727" magical="208.6504" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="220.262284" magical="146.5258"/>
             <speed>
@@ -807,7 +806,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+        <ai clanHelpRange="300" isAggressive="false">
             <clanList>
                 <clan>UNDEAD</clan>
             </clanList>
@@ -874,9 +873,9 @@
         <race>UNDEAD</race>
         <sex>MALE</sex>
         <equipment rhand="127"/> <!-- Crimson Sword -->
-        <acquire exp="13022" sp="390"/>
+        <acquire exp="15193" sp="456"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="543.27775666667" hpRegen="5.5" mp="754.905" mpRegen="2.1"/>
+            <vitals hp="1396.64158795631" hpRegen="5.5" mp="692.4" mpRegen="2.1"/>
             <attack physical="303.409755" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="173.7527545" magical="139.8592"/>
             <speed>
@@ -898,8 +897,8 @@
         </skillList>
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
-        <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai clanHelpRange="300" aggroRange="450">
+        <sNpcPropHpRate>2</sNpcPropHpRate>		
+        <ai clanHelpRange="300" isAggressive="false">
             <clanList>
                 <clan>UNDEAD</clan>
             </clanList>
@@ -1319,7 +1318,7 @@
             <param name="MoveAroundSocial2" value="60"/>
 			<minions name="Privates">
                 <npc id="20762" count="3" respawnTime="0" weightPoint="1"/> <!--Pytan Knight-->
-            </minions>
+            </minions>		
             <param name="ShoutTarget" value="1"/>
             <param name="SetHateGroup" value="ATTACKER_GROUP"/>
             <param name="SetHateGroupRatio" value="20"/>
@@ -1363,7 +1362,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>3</sNpcPropHpRate>
-        <ai aggroRange="500" clanHelpRange="500" isAggressive="true">
+        <ai aggroRange="500" clanHelpRange="500">
             <clanList>
                 <clan>MALRUK</clan>
             </clanList>
@@ -1991,20 +1990,25 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DDMagic" id="4066" level="6"/> <!-- NPC Twister -->
+			<param name="Party_Type" value="2"/>
+			<minions name="Privates">
+                <npc id="20772" count="1" respawnTime="0" weightPoint="1"/> <!-- Barif's Pet -->
+                <npc id="24015" count="1" respawnTime="0" weightPoint="1"/> <!-- Barif Camrin -->
+            </minions>
         </parameters>
         <race>GIANT</race>
         <sex>MALE</sex>
         <equipment lhand="3938"/> <!-- lhand: Giant Rod -->
         <acquire exp="324802" sp="9744"/>
-        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="2721.23288" hpRegen="8.5" mp="2574.465" mpRegen="3"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">           
+            <attack physical="1055.28566004965" magical="720.623302603812" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="349.77477" magical="255.95"/>
+			<vitals hp="5827.18" hpRegen="8.5" mp="2361.0" mpRegen="3"/>
             <speed>
                 <walk ground="55"/>
                 <run ground="180"/>
             </speed>
             <hitTime>560</hitTime>
-            <attack physical="946.44055895414" magical="603.837886935576" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="382.4501" magical="296.777"/>
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
@@ -2059,14 +2063,15 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="PhysicalSpecial" id="4032" level="6"/> <!-- NPC Strike -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>CONSTRUCT</race>
         <sex>MALE</sex>
         <acquire exp="196742" sp="5902"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="2233.04646" hpRegen="8.5" mp="2520.48" mpRegen="3"/>
-            <attack physical="902.3423" magical="562.9881" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
-            <defence physical="372.3891" magical="286.4427"/>
+            <vitals hp="5738.36" hpRegen="8.5" mp="2311.2" mpRegen="3"/>
+            <attack physical="501.08068" magical="342.17315" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="252.49346" magical="168.112997103103"/>
             <speed>
                 <walk ground="80"/>
                 <run ground="170"/>
@@ -2086,11 +2091,7 @@
         <shots shotChance="30" spiritChance="30"/>
         <exCrtEffect>false</exCrtEffect>
         <sNpcPropHpRate>2</sNpcPropHpRate>
-        <ai aggroRange="500" clanHelpRange="300" isAggressive="false">
-            <clanList>
-                <clan>GIANT</clan>
-            </clanList>
-        </ai>
+        <ai aggroRange="500" clanHelpRange="300" isAggressive="false"/>          
         <collision>
             <radius normal="15"/>
             <height normal="35"/>
@@ -2129,20 +2130,24 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="DeBuff" id="4038" level="5"/> <!-- Decrease Atk. Spd. -->
+			<param name="Party_Type" value="2"/>
+			<minions name="Privates">
+                <npc id="20774" count="3" respawnTime="120" weightPoint="1"/> <!-- Conjurer Bat -->
+            </minions>
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
 		<acquire exp="18539" sp="556" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1003.22063" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
-            <speed>
+            <vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7"/>           
+            <attack physical="731.52506" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="305.35947" magical="203.311781207645"/>
+			<speed>
                 <walk ground="60"/>
                 <run ground="174"/>
             </speed>
-            <hitTime>500</hitTime>
-            <attack physical="665.0227818" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="335.895417" magical="223.44881"/>
-        </stats>
+			<hitTime>500</hitTime>
+        </stats>		
         <status undying="false" canBeSown="true"/>
         <skillList>
             <skill id="4416" level="4"/> <!-- Animals -->
@@ -2203,19 +2208,20 @@
             <param name="SpiritShotRate" value="5"/>
             <param name="LongRangeGuardRate" value="5"/>
             <skill name="MagicHeal" id="4065" level="5"/> <!-- NPC Heal -->
+			<param name="Party_Type" value="1"/>
         </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
 		<acquire exp="18539" sp="556" />
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="1003.22063" hpRegen="7.5" mp="1466.445" mpRegen="2.7"/>
-            <speed>
+            <vitals hp="2578.55294197919" hpRegen="7.5" mp="1345.8" mpRegen="2.7"/>           
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="197.024195544734"/>
+			<speed>
                 <walk ground="60"/>
                 <run ground="174"/>
             </speed>
             <hitTime>500</hitTime>
-            <attack physical="626.2397545" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
-            <defence physical="325.507567" magical="216.53847"/>
         </stats>
         <status undying="false" canBeSown="true"/>
         <skillList>
@@ -2425,6 +2431,7 @@
         </dropLists>
     </npc>
     <npc id="20778" level="39" type="Monster" name="Ragna Orc Prefect">
+	<!-- https://l2wiki.com/classic/Ragna_Orc_Prefect -->
         <parameters>
             <param name="MoveAroundSocial" value="70"/>
             <param name="MoveAroundSocial1" value="70"/>
@@ -2439,9 +2446,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="2"/> <!-- Long Sword -->
-        <acquire exp="2725" sp="81"/>
+        <acquire exp="3180" sp="96"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="379.81002" hpRegen="4.5" mp="505.335" mpRegen="1.8"/>
+            <vitals hp="976.64429110491" hpRegen="4.5" mp="505.335" mpRegen="1.8"/>
             <attack physical="150.9679636" magical="113.4007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
             <defence physical="167.714272" magical="111.56912"/>
             <speed>
@@ -2492,6 +2499,7 @@
         </dropLists>
     </npc>
     <npc id="20779" level="39" type="Monster" name="Ragna Orc Priest">
+	<!-- https://l2wiki.com/classic/Ragna_Orc_Priest -->
         <parameters>
             <param name="MoveAroundSocial" value="70"/>
             <param name="MoveAroundSocial1" value="70"/>
@@ -2505,9 +2513,9 @@
         <race>HUMANOID</race>
         <sex>MALE</sex>
         <equipment rhand="7"/> <!-- Apprentice's Rod -->
-        <acquire exp="2725" sp="81"/>
+        <acquire exp="3180" sp="96"/>
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-            <vitals hp="379.81002" hpRegen="4.5" mp="505.335" mpRegen="1.8"/>
+            <vitals hp="976.64429110491" hpRegen="4.5" mp="505.335" mpRegen="1.8"/>
             <attack physical="150.9679636" magical="113.4007" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
             <defence physical="167.714272" magical="111.56912"/>
             <speed>

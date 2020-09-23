@@ -40,10 +40,6 @@
         <attributes>
             <reuse initial="-1000"/>
         </attributes>
-        <consume>
-            <item initial="91710"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
     </skill>
     <skill id="51405" name="Enchanted Falchion Power I" action="A1">
@@ -52,10 +48,6 @@
         <attributes>
             <reuse initial="-1000"/>
         </attributes>
-        <consume>
-            <item initial="91710"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
     </skill>
     <skill id="51406" name="Enchanted Falchion Power II" action="A1">
@@ -64,10 +56,6 @@
         <attributes>
             <reuse initial="-1000"/>
         </attributes>
-        <consume>
-            <item initial="91710"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
     </skill>
     <skill id="51407" name="Enchanted Iron Hammer Power" action="A1">
@@ -76,10 +64,6 @@
         <attributes>
             <reuse initial="-1000"/>
         </attributes>
-        <consume>
-            <item initial="91710"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
     </skill>
     <skill id="51408" name="Enchanted Voodoo Doll Power" action="A1">
@@ -88,10 +72,6 @@
         <attributes>
             <reuse initial="-1000"/>
         </attributes>
-        <consume>
-            <item initial="91710"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
     </skill>
     <skill id="51409" name="Enchanted Flanged Mace Power" action="A1">
@@ -100,10 +80,6 @@
         <attributes>
             <reuse initial="-1000"/>
         </attributes>
-        <consume>
-            <item initial="91710"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
     </skill>
     <skill id="51410" name="Enchanted Sword Breaker Power" action="A1">
@@ -112,10 +88,6 @@
         <attributes>
             <reuse initial="-1000"/>
         </attributes>
-        <consume>
-            <item initial="91710"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
     </skill>
     <skill id="51411" name="Enchanted Viper Fang Power" action="A1">
@@ -124,10 +96,6 @@
         <attributes>
             <reuse initial="-1000"/>
         </attributes>
-        <consume>
-            <item initial="91710"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
     </skill>
     <skill id="51412" name="Enchanted Compound Bow Power" action="A1">
@@ -136,10 +104,6 @@
         <attributes>
             <reuse initial="-1000"/>
         </attributes>
-        <consume>
-            <item initial="91710"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
     </skill>
     <skill id="51413" name="Advanced Scroll of Escape - Event" action="A1">
@@ -148,10 +112,6 @@
             <magic-level initial="1"/>
             <hit-time initial="1000"/>
         </attributes>
-        <consume>
-            <item initial="91839"/>
-            <item-count initial="1"/>
-        </consume>
         <target/>
         <conditions>
             <condition name="OpCanEscape"/>
@@ -178,10 +138,26 @@
             level 2: Sayha's Grace Consumption Rate -20%, L2 Coin Gain +100%, XP/SP Gain +10%.
          -->
         <icon initial="icon.aden_bless_rune_i01">
-            <value level="2">icon.aden_bless_rune_i02</value>
+		<value level="2">icon.aden_bless_rune_i02</value>
         </icon>
-        <attributes property="MAGIC"/>
+        <attributes property="MAGIC" magic-critical-rate="5.0" stay-after-death="true"/>
         <target/>
+        <effects>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power>
+					<value level="2">10.0</value>
+				</power>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+                <power>
+					<value level="2">10.0</value>
+				</power>
+            </stat-modify>
+			<!-- // TODO
+            <stat-modify mode="PER" stat="BONUS_L2COIN_DROP_RATE">
+                <power initial="100.0"/>
+            </stat-modify>	-->		
+        </effects>			
     </skill>
     <skill id="51417" name="Abundant Treasure Chest" action="A1">
         <!-- none -->
@@ -537,26 +513,110 @@
     <skill id="51457" name="Adventurer's High Priest Transformation Scroll" action="A2">
         <!-- Transforms into High Priest with the power of the scroll. For 20 minutes min., XP/SP Gain +5%, P. Atk. +63, M. Atk. +70. Transformation remains after death. \n\n<Special Ability>\nWhen attacking or casting skills while transformed as High Priest there's a chance to recover party members' HP by 300and MP by 80. -->
         <icon initial="icon.bm2018_healer_i01"/>
-        <attributes property="PHYSIC">
+        <attributes property="PHYSIC" magic-critical-rate="5.0" stay-after-death="true" blocked-on-olympiad="true" auto-use="BUFF">
+			<magic-level initial="56"/>
             <reuse initial="60000"/>
-        </attributes>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+            <hit-time initial="500"/>
+        </attributes>		
         <target/>
+		<abnormal type="CHANGEBODY" visual="CHANGEBODY_HIGH_PRIEST">
+			<level initial="1"/>
+			<time initial="1200"/>
+		</abnormal>
+		<effects>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="63.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="70.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_EXP">
+                <power initial="5.0"/>
+            </stat-modify>
+            <stat-modify mode="PER" stat="BONUS_SP">
+				<power initial="5.0"/>
+            </stat-modify>		
+		</effects>	
     </skill>
     <skill id="51458" name="Adventurer's Valkyrie Transformation Scroll" action="A2">
         <!-- Transforms into Valkyrie with the power of the scroll. For 20 minutes, P. Atk. +63, M. Atk. +70, P./M. Critical Rate +20, Atk. Spd./Casting Spd. +50, Speed +10, Sayha's Grace Consumption Speed -5%. Transformation remains after death. \n\n<Special Ability>\nAttack or cast malevolent skills while transformed as Valkyrie for a chance to inflict additional physical damage. When using malevolent magic skills, has a chance to inflict additional magic damage. -->
         <icon initial="icon.bm2018_valkyrie_i01"/>
         <attributes property="PHYSIC">
+			<magic-level initial="56"/>
             <reuse initial="60000"/>
-        </attributes>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+            <hit-time initial="500"/>
+        </attributes>			
         <target/>
+		<abnormal type="CHANGEBODY" visual="CHANGEBODY_VALKYRIE">
+			<level initial="1"/>
+			<time initial="1200"/>
+		</abnormal>	
+		<effects>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="63.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="70.0"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE">
+				<power initial="20.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="20.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
+				<power initial="50.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+				<power initial="50.0"/>
+            </stat-modify>
+            <speed>
+                <power initial="10.0"/>
+            </speed>			
+		</effects>	
     </skill>
     <skill id="51459" name="Adventurer's Dragon Berserker Transformation Scroll" action="A2">
         <!-- Transforms into Dragon Berserker with the power of the scroll. For 20 minutes, P. Atk. +135, M. Atk. +150, P. Critical/M. Critical Rate +50, Atk. Spd./Casting Spd. +100, Speed +15, Sayha's Grace Consumption Speed -10%. Transformation remains after death. \n\n<Special Ability>\nAttack or use skills while transformed as Dragon Berserker for a chance to increase your P. Atk. by 300, M. Atk. by 300, P./M. Critical Damage by 20 minutes0, Atk. Spd./Casting Spd. by 20 minutes1, and to activate Berserker Soul which reflects 20 minutes2 of damage received back to the enemy. -->
         <icon initial="icon.bm2018_dragon_i01"/>
         <attributes property="PHYSIC">
+			<magic-level initial="56"/>
             <reuse initial="60000"/>
-        </attributes>
+			<cool-time initial="500"/>
+			<effect-point initial="1"/>
+            <hit-time initial="500"/>
+        </attributes>	
         <target/>
+		<abnormal type="CHANGEBODY" visual="CHANGEBODY_DRAGON">
+			<level initial="1"/>
+			<time initial="1200"/>
+		</abnormal>	
+		<effects>
+            <stat-modify stat="PHYSICAL_ATTACK">
+                <power initial="135.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK">
+                <power initial="150.0"/>
+            </stat-modify>
+            <stat-modify stat="CRITICAL_RATE">
+				<power initial="50.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_CRITICAL_RATE">
+				<power initial="50.0"/>
+            </stat-modify>
+            <stat-modify stat="PHYSICAL_ATTACK_SPEED">
+				<power initial="100.0"/>
+            </stat-modify>
+            <stat-modify stat="MAGIC_ATTACK_SPEED">
+				<power initial="100.0"/>
+            </stat-modify>
+            <speed>
+                <power initial="15.0"/>
+            </speed>		
+		</effects>	
     </skill>
     <skill id="51460" name="High Priest - Blessing of Eva" action="A1">
         <!-- Recovers a party member's HP by 300 and MP by 80 through Divine Power. -->

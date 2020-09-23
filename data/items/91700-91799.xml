@@ -44,20 +44,39 @@
 
 	<item id="91707" name="+4 C-grade Top-grade Armor Set Pack" type="NONE">
 	<!-- Double-click to obtain +4 Enchanted Full Plate Helmet, Full Plate Armor, Full Plate Gauntlets, and Full Plate Boots. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+		<restriction stackable="true" dropable="false" sellable="true" tradable="true"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="93639" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Full Plate Helmet -->
+			<item id="93642" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Full Plate Armor -->
+			<item id="93641" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Full Plate Guantlets -->
+			<item id="93640" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Full Plate Boots -->
+		</extract>	
 	</item>
 
 	<item id="91708" name="+4 C-grade Top-grade Armor Set Pack" type="NONE">
 	<!-- Double-click to obtain +4 Enchanted Full Plate Helmet, Drake Leather Armor, Drake Leather Gloves, and Drake Leather Boots -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+		<restriction stackable="true" dropable="false" sellable="true" tradable="true"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="93639" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Full Plate Helmet -->
+			<item id="93643" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Drake Leather Armor -->
+			<item id="93645" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Drake Leather Gloves -->
+			<item id="93644" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Drake Leather Boots -->
+		</extract>	
 	</item>
 
 	<item id="91709" name="+4 C-grade Top-grade Armor Set Pack" type="NONE">
 	<!-- Double-click to obtain +4 Enchanted Full Plate Helmet, Karmian Tunic, Karmian Stockings, Karmian Gloves, and Karmian Boots. -->
-		<restriction stackable="true" dropable="false" sellable="false"/>
+		<restriction stackable="true" dropable="false" sellable="true" tradable="true"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="93639" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Full Plate Helmet -->
+			<item id="93646" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Karmian Tunic -->
+			<item id="93647" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Karmian Stockings -->
+			<item id="93649" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Karmian Gloves -->
+			<item id="93648" chance="100" min-enchant="4" max-enchant="4"/>  <!-- Karmian Boots -->
+		</extract>
 	</item>
 
 	<item id="91710" name="Weapon Summoning Coupon" type="NONE">
@@ -543,19 +562,19 @@
 		<attributes immediate-effect="true" action="PEEL"/>
 	</item>
 
-	<item id="91780" name="Battle Scroll" type="NONE">
+	<item id="91780" name="Battle Scroll" type="SCROLL">
 	<!-- For 20 minutes, P. Atk. +200, M. Atk. +350, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +50, P. Def./M. Def. +200, Max HP/Max MP/Max CP +500. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="54071" value="-1"/>  <!-- Battle Scroll -->
 		</skill-reducer>
 	</item>
 
-	<item id="91781" name="Sayha's Buff Scroll" type="NONE">
+	<item id="91781" name="Sayha's Buff Scroll" type="SCROLL">
 	<!-- For 20 minutes, applies the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Prophecy, Sayha's Restore HP, Sayha's Restore MP. If Sayha's Restore MP is in effect, cannot use items right away. Cooldown 1 minute. Caution: Sayha’s Victory buff will not be applied while Battleground Scroll is in effect. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<attributes weight="0" reuse-delay="60000" immediate-effect="true" action="SKILL_REDUCE_ON_SKILL_SUCCESS" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="54070" value="-1"/>  <!-- Sayha's Buff Scroll - Event -->
 		</skill-reducer>

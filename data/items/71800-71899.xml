@@ -263,6 +263,9 @@
 	<weapon id="71836" name="Épée" type="RAPIER" body-part="RIGHT_HAND">
 	<!-- 30-day weapon. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL HUMAN ELF DARK_ELF"/>
+		</condition>
 		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -279,6 +282,9 @@
 	<weapon id="71837" name="Chevalier Rapier" type="RAPIER" body-part="RIGHT_HAND">
 	<!-- 30-day weapon. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL HUMAN ELF DARK_ELF"/>
+		</condition>
 		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -294,7 +300,10 @@
 
 	<weapon id="71838" name="Colichemarde" type="RAPIER" body-part="RIGHT_HAND">
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
-		<attributes weight="1300" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL HUMAN ELF DARK_ELF"/>
+		</condition>
+		<attributes weight="1300" commission-type="OTHER_ITEM" duration="21600" enchant-enabled="false"/>
 		<crystal type="B"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -310,6 +319,9 @@
 	<weapon id="71839" name="Hunting Sword" type="ANCIENT_SWORD" body-part="TWO_HAND">
 	<!-- 30-day weapon. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL ORC DWARF"/>
+		</condition>
 		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="D"/>
 		<damage radius="40" angle="240"/>
@@ -327,6 +339,9 @@
 	<weapon id="71840" name="Schlager" type="ANCIENT_SWORD" body-part="TWO_HAND">
 	<!-- 30-day weapon. -->
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL ORC DWARF"/>
+		</condition>
 		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
 		<crystal type="C"/>
 		<damage radius="40" angle="240"/>
@@ -343,7 +358,10 @@
 
 	<weapon id="71841" name="Dismantler" type="ANCIENT_SWORD" body-part="TWO_HAND">
 		<restriction freightable="false" tradable="false" dropable="false" private-sellable="false"/>
-		<attributes weight="1530" commission-type="OTHER_ITEM" enchant-enabled="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL ORC DWARF"/>
+		</condition>
+		<attributes weight="1530" commission-type="OTHER_ITEM" duration="21600" enchant-enabled="false"/>
 		<crystal type="B"/>
 		<damage radius="40" angle="240"/>
 		<stats>
@@ -361,12 +379,18 @@
 	<!-- Double-click to obtain 1 +10 Colichemarde (15-day). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="71838" chance="100" min-enchant="10" max-enchant="10"/>  <!-- +10 Colichemarde for 15 days -->
+		</extract>
 	</item>
 
 	<item id="71843" name="+10 Dismantler Pack" type="NONE">
 	<!-- Double-click to obtain 1 +10 Dismantler (15-day). -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+		<extract>
+			<item id="71841" chance="100" min-enchant="10" max-enchant="10"/>  <!-- +10 Dismantler for 15 days -->
+		</extract>
 	</item>
 
 	<weapon id="71844" name="Don Quijote Collab Pom Poms" type="DUAL" body-part="TWO_HAND">
@@ -451,7 +475,7 @@
 		<attributes/>
 		<extract>
 			<item id="49674" min-count="30" max-count="30" chance="100"/>  <!-- XP Boost Scroll -->
-			<item id="29609" min-count="1" max-count="1" chance="100"/>  <!-- Timed Weapon Exchange Coupon (C-grade) -->
+			<item id="71267" min-count="2" max-count="2" chance="100"/>  <!-- Hero's Weapon Exchange Ticket - Lv. 54 -->
 			<item id="90907" min-count="500" max-count="500" chance="100"/>  <!-- Soulshot Ticket -->
 			<item id="49518" min-count="30" max-count="30" chance="100"/>  <!-- Pirate's Special Fruit -->
 			<item id="91781" min-count="30" max-count="30" chance="100"/>  <!-- Sayha's Buff Scroll -->
@@ -468,7 +492,10 @@
 	<item id="71856" name="L2 Coin Pouch" type="NONE">
 	<!-- Pouch containing L2 Coins. Double-click to obtain 20-100 L2 Coins. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
-		<attributes/>
+		<attributes immediate-effect="false" action="PEEL"/>
+		<extract>
+			<item id="91663" min-count="20" max-count="100" chance="100"/>  
+		</extract>
 	</item>
 
 	<item id="71857" name="Artisan's Goggles Pack" type="NONE">
