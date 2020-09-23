@@ -197,10 +197,10 @@
 	
 	<chance-group name="PEDANT_DRAGON_L1">
         <enchant until="1" chance="100"/>
-        <enchant from="1" until="2" chance="90"/>
-        <enchant from="2" until="3" chance="80"/>
-        <enchant from="3" until="5" chance="70"/>
-        <enchant from="4" until="5" chance="70"/>       
+        <enchant from="1" until="2" chance="80"/>
+        <enchant from="2" until="3" chance="70"/>
+        <enchant from="3" until="5" chance="50"/>
+        <enchant from="4" until="5" chance="30"/>
     </chance-group>
 	<chance-group name="PEDANT_DRAGON_L2">
         <enchant until="1" chance="100"/>
@@ -224,8 +224,9 @@
         <enchant from="4" until="5" chance="2"/>       
     </chance-group>
 	
+ <!-- Weapon Enhancement Stones -->	
     <fail-rewards>
-        <weapon reward-id="91462"> <!-- Weapon Enhancement Stone -->
+        <weapon reward-id="91462">
             <reward grade="D">
                 <enchant from="7" until="18" amount="1" bonus-per-level="1"/>
                 <enchant from="19" amount="14"/>
@@ -259,11 +260,12 @@
                 <enchant from="7" until="9" amount="15" bonus-per-level="3"/>
                 <enchant from="10" until="11" amount="25" bonus-per-level="3"/>
                 <enchant from="12" until="18" amount="29" bonus-per-level="1"/>
-                <enchant from="19" amount="36" bonus-per-level="1"/> <!-- TODO Confirm  correct value l2wiki (36) seems to be wrong since is less than A grade -->
+                <enchant from="19" amount="36" bonus-per-level="1"/>
             </reward>
         </weapon>
-
-        <armor reward-id="91463"> <!-- Armor Enhancement Stone -->
+		
+ <!-- Armor Enhancement Stones -->
+        <armor reward-id="91463">
             <reward grade="D">
                 <enchant from="6" until="8" amount="1" bonus-per-level="1"/>
                 <enchant from="9" until="11" amount="5" bonus-per-level="1"/>
@@ -296,7 +298,8 @@
             </reward>
         </armor>
     </fail-rewards>
-
+	
+ <!-- HP bonus of modified items: Armor -->
     <armor-hp-bonus>
         <bonus grade="D" full-armor-max="78">
             <enchant from="4" until="5" amount="9" bonus-per-level="17"/>
@@ -434,7 +437,7 @@
     </group>
 	<group id="16">
         <enchant-chance group="ZODIAK_AGATHION">
-            <slots>PENDANT</slots>
+            <slots>AGATHION</slots>
         </enchant-chance>
     </group>
 	<group id="17">
@@ -825,32 +828,6 @@
             91123 <!-- Petram Necklace -->
         </items>
     </scroll>
-	
-    <!-- Dragon Varnish -->
-    <scroll id="91249" max-enchant="5" group="17">
-        <items>
-            71691 <!-- Dragon Pedant - Attack Type Lv. 1 -->          
-            71695 <!-- Dragon Pedant - Magic Type Lv. 1 -->           
-        </items>
-    </scroll>
-	<scroll id="91249" max-enchant="5" group="18">
-        <items>
-            71692 <!-- Dragon Pedant - Attack Type Lv. 2 -->           
-            71696 <!-- Dragon Pedant - Magic Type Lv. 2 -->            
-        </items>
-    </scroll>
-	<scroll id="91249" max-enchant="5" group="19">
-        <items>
-            71693 <!-- Dragon Pedant - Attack Type Lv. 3 -->       
-            71697 <!-- Dragon Pedant - Magic Type Lv. 3 -->
-        </items>
-    </scroll>
-	<scroll id="91249" max-enchant="5" group="20">
-        <items>           
-            71694 <!-- Dragon Pedant - Attack Type Lv. 4 -->
-            71698 <!-- Dragon Pedant - Magic Type Lv. 4 -->
-        </items>
-    </scroll>
 
     <!-- Improved Scroll: Enchant Fishing Weapon -->
     <scroll id="90959">
@@ -995,6 +972,21 @@
             70882 <!-- Aden Cloak - Legendary -->
             70883 <!-- Elmore Cloak - Legendary -->
             70884 <!-- Ferios Cloak - Legendary -->
+        </items>
+    </scroll>
+
+
+    <!-- Dragon Varnish -->
+    <scroll id="91249" max-enchant="5" group="17">
+        <items>
+            71691 <!-- Dragon Pedant - Attack Type Lv. 1 -->
+            71692 <!-- Dragon Pedant - Attack Type Lv. 2 -->
+            71693 <!-- Dragon Pedant - Attack Type Lv. 3 -->
+            71694 <!-- Dragon Pedant - Attack Type Lv. 4 -->
+            71695 <!-- Dragon Pedant - Magic Type Lv. 1 -->
+            71696 <!-- Dragon Pedant - Magic Type Lv. 2 -->
+            71697 <!-- Dragon Pedant - Magic Type Lv. 3 -->
+            71698 <!-- Dragon Pedant - Magic Type Lv. 4 -->
         </items>
     </scroll>
 

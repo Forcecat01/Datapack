@@ -152,9 +152,15 @@
 	<!-- Double-click to obtain +10 Enchanted Dragon’s Belt. -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+<<<<<<< HEAD
 			<extract >
 			<item id="91788" chance="100" min-enchant="10" max-enchant="10"/>  <!-- Dragon's Belt +10 -->
 		</extract>	
+=======
+		<extract>
+			<item id="91788" chance="100" min-enchant="10" max-enchant="10"/>  <!-- Dragon's Belt +10 -->
+		</extract>
+>>>>>>> upstream/dev
 	</item>
 
 	<armor id="92317" name="Jin Kamael 2nd Dark Transformation" type="HEAVY" body-part="ALL_DRESS">
@@ -321,6 +327,9 @@
 	<weapon id="92336" name="Admiral's Estoc" type="RAPIER" body-part="RIGHT_HAND">
 	<!-- Admiral's Estoc imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL HUMAN ELF DARK_ELF"/>
+		</condition>
 		<attributes weight="1300"/>
 		<crystal type="C"/>
 		<stats>
@@ -411,6 +420,9 @@
 	<weapon id="92342" name="Saber Tooth" type="ANCIENT_SWORD" body-part="TWO_HAND">
 	<!-- Saber Tooth imbued with gratitude. Cannot be enchanted, augmented, or equipped with a rune. -->
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL ORC DWARF"/>
+		</condition>
 		<attributes weight="1530"/>
 		<crystal type="C"/>
 		<stats>

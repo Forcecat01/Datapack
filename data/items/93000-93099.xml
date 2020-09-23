@@ -286,6 +286,9 @@
 
 	<weapon id="93036" name="Rapier of Aden" type="RAPIER" body-part="RIGHT_HAND">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL HUMAN ELF DARK_ELF"/>
+		</condition>
 		<attributes weight="1300"/>
 		<crystal type="D"/>
 		<stats>
@@ -300,6 +303,9 @@
 
 	<weapon id="93037" name="Ancient Sword of Aden" type="ANCIENT_SWORD" body-part="TWO_HAND">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL ORC DWARF"/>
+		</condition>
 		<attributes weight="1530"/>
 		<crystal type="D"/>
 		<stats>
@@ -330,6 +336,7 @@
 	<!-- Adventurer’s Griffin Agathion Enchant Scroll. M. Def. increases when enchanting Agathion.\n<Warning>\nCan only be used on Adventurer’s Griffin Agathion. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
 		<attributes/>
+		<action handler="EnchantScrolls"/>
 	</item>
 
 	<armor id="93041" name="Adventurer’s Cloak" type="NONE" body-part="BACK">
@@ -516,6 +523,9 @@
 
 	<weapon id="93057" name="Admiral's Estoc" type="RAPIER" body-part="RIGHT_HAND">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL HUMAN ELF DARK_ELF"/>
+		</condition>
 		<attributes weight="1300" price="6130000"/>
 		<crystal type="C"/>
 		<stats>
@@ -530,6 +540,9 @@
 
 	<weapon id="93058" name="Saber Tooth" type="ANCIENT_SWORD" body-part="TWO_HAND">
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
+		<condition add-name="true" msg-id="113">
+			<player races="JIN_KAMAEL ORC DWARF"/>
+		</condition>
 		<attributes weight="1530" price="6130000"/>
 		<crystal type="C"/>
 		<stats>
@@ -565,6 +578,9 @@
 		<restriction tradable="false" dropable="false" sellable="false" private-sellable="false"/>
 		<attributes weight="10" />
 		<crystal />
+		<skills>
+			<skill id="50304" value="-1"/>
+		</skills>
 	</armor>
 
 	<item id="93063" name="Inventory Expansion Ticket of Glory" type="NONE">

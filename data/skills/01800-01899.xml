@@ -8,7 +8,7 @@
 			<reuse initial="7200000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
-			<hit-time initial="3000"/>
+			<hit-time initial="3050"/>
 		</attributes>
 		<consume>
 			<item initial="49543"/>
@@ -63,7 +63,7 @@
 			<reuse initial="7200000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
-			<hit-time initial="3000"/>
+			<hit-time initial="3050"/>
 		</attributes>
 		<consume>
 			<item initial="49543"/>
@@ -118,7 +118,7 @@
 			<reuse initial="3600000"/>
 			<cool-time initial="500"/>
 			<effect-point initial="1"/>
-			<hit-time initial="3000"/>
+			<hit-time initial="3050"/>
 		</attributes>
 		<consume>
 			<item initial="49543"/>
@@ -291,8 +291,8 @@
 			<time initial="1200"/>
 		</abnormal>
 		<effects>
-			<stat-modify stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
-				<power/>
+			<stat-modify mode="PER" stat="CRITICAL_DAMAGE" stat-add="CRITICAL_DAMAGE_ADD">
+				<power initial="35.0"/>
 			</stat-modify>
 		</effects>
 	</skill>
@@ -511,7 +511,7 @@
 		</attributes>
 		<consume>
 			<mana-init initial="20"/>
-			<mana initial="98"/>
+			<mana initial="78"/>
 		</consume>
 		<target type="TARGET"/>
 		<effects>
@@ -579,7 +579,7 @@
 		</attributes>
 		<target/>
 		<effects>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
 				<power initial="13.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_RATE">
@@ -594,7 +594,7 @@
 		</attributes>
 		<target/>
 		<effects>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
 				<power initial="9.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_RATE">
@@ -609,7 +609,7 @@
 		</attributes>
 		<target/>
 		<effects>
-			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED" stat-add="MAGIC_ATTACK_SPEED">
+			<stat-modify mode="PER" stat="MAGIC_ATTACK_SPEED">
 				<power initial="5.0"/>
 			</stat-modify>
 			<stat-modify stat="MAGIC_CRITICAL_RATE">
