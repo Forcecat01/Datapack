@@ -152,9 +152,15 @@
 	<!-- Double-click to obtain +10 Enchanted Dragon’s Belt. -->
 		<restriction stackable="true" dropable="false" sellable="false"/>
 		<attributes immediate-effect="true" action="PEEL"/>
+<<<<<<< HEAD
+			<extract >
+			<item id="91788" chance="100" min-enchant="10" max-enchant="10"/>  <!-- Dragon's Belt +10 -->
+		</extract>	
+=======
 		<extract>
 			<item id="91788" chance="100" min-enchant="10" max-enchant="10"/>  <!-- Dragon's Belt +10 -->
 		</extract>
+>>>>>>> upstream/dev
 	</item>
 
 	<armor id="92317" name="Jin Kamael 2nd Dark Transformation" type="HEAVY" body-part="ALL_DRESS">

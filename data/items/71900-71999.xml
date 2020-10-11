@@ -146,14 +146,20 @@
 
 	<item id="71924" name="Weapon Supply Box (A-grade)" type="NONE">
 	<!-- Obtain one of the A-grade weapons. -->
-		<restriction stackable="true"/>
-		<attributes/>
+		<restriction stackable="true" dropable="true" sellable="true"/>
+		<attributes reuse-delay="3000" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<skill-reducer>
+			<skill id="39172" value="-1"/>  <!-- Weapon Supply Box (A-grade) -->
+		</skill-reducer>		
 	</item>
 
 	<item id="71925" name="Armor Supply Box (A-grade)" type="NONE">
 	<!-- Obtain one of the A-grade armor. -->
-		<restriction stackable="true"/>
-		<attributes/>
+		<restriction stackable="true" dropable="true" sellable="true"/>
+		<attributes reuse-delay="3000" action="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+		<skill-reducer>
+			<skill id="39173" value="-1"/>  <!-- Armor Supply Box (A-grade) -->
+		</skill-reducer>		
 	</item>
 
 	<item id="71926" name="Agathion Exchange Ticket Pack" type="NONE">
@@ -281,8 +287,11 @@
 
 	<item id="71945" name="Dragon's Coin Pouch" type="SCROLL">
 	<!-- Contains Dragon's Coins. Has a chance to obtain 1-15000 Dragon's Coins at random. -->
-		<restriction stackable="true" sellable="false"/>
-		<attributes/>
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes immediate-effect="false" action="PEEL"/>
+		<extract>
+			<item id="71944" min-count="1" max-count="15000" chance="100"/>  
+		</extract>
 	</item>
 
 	<item id="71946" name="Dragon's Treasure Chest" type="SCROLL">
@@ -315,21 +324,36 @@
 		<attributes/>
 	</item>
 
+<<<<<<< HEAD
+	<item id="71951" name="VIP Battle Scroll" type="POTION">
+	<!-- For 20 minutes, P. Atk. +250, M. Atk. +400, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +80, P. Def./M. Def. +300, Max HP/Max MP/Max CP +700. The effect remains active even after death. Cooldown 1 minute. -->
+		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+		<attributes reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="59726"/>  <!--  Battle Scroll -->
+=======
 	<item id="71951" name="VIP Battle Scroll" type="SCROLL">
 	<!-- For 20 minutes, P. Atk. +250, M. Atk. +400, P. Critical/M. Skill Critical Rate +30, Atk. Spd./Casting Spd. +80, P. Def./M. Def. +300, Max HP/Max MP/Max CP +700. The effect remains active even after death. Cooldown 1 minute. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>		
 		<attributes immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="59726" value="-1"/>  <!-- Battle Scroll -->
+>>>>>>> upstream/dev
 		</skill-reducer>
 	</item>
 
 	<item id="71952" name="Scroll: VIP XP/SP Boost" type="SCROLL">
 	<!-- For 20 min., XP/SP gain +120%. Effect remains even after death. -->
 		<restriction stackable="true" tradable="false" dropable="false" sellable="false" private-sellable="false" clan-depositable="false" castle-depositable="false" freightable="false"/>
+<<<<<<< HEAD
+		<attributes weight="5" reuse-delay="3000" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
+		<skill-reducer>
+			<skill id="59727"/>  <!-- XP/SP Boost Scroll -->
+=======
 		<attributes weight="5" immediate-effect="true" action="SKILL_REDUCE" auto-use="SUPPLY"/>
 		<skill-reducer>
 			<skill id="59727" value="-1"/> <!-- XP/SP Boost Scroll -->
+>>>>>>> upstream/dev
 		</skill-reducer>
 	</item>
 
@@ -339,9 +363,15 @@
 		<attributes weight="100" duration="43200" />
 		<crystal />
 		<skills>
+<<<<<<< HEAD
+			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->		
+			<skill id="55885" level="2" value="-1"/>
+			<skill id="59729" value="-1"/>				
+=======
 			<skill id="51025" level="4" value="-1"/>  <!-- Expand Primary and Secondary Agathion Slots -->			
 			<skill id="55885" level="2" value="-1"/>
 			<skill id="59729" value="-1"/>			
+>>>>>>> upstream/dev
 		</skills>
 	</armor>
 
@@ -351,7 +381,11 @@
 		<attributes duration="43200" />
 		<crystal />
 		<skills>
+<<<<<<< HEAD
+			<skill id="59730" level="1"/>  <!-- Talisman Bracelet -->
+=======
 			<skill id="59730" level="1" value="-1"/>  <!-- Talisman Bracelet -->
+>>>>>>> upstream/dev
 		</skills>
 	</armor>
 
