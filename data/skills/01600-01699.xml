@@ -319,16 +319,14 @@
                 <value level="45">102</value>
             </mana>
         </consume>
-        <target type="ENEMY" scope="FAN" object="NOT_FRIEND" range="400" affect-min="5" affect-random="7">
-            <fan-range start-angle="0" radius="400" angle="90"/>
-        </target>
+        <target type="ENEMY"/>
         <conditions>
             <weapon>
                 <type>SWORD TWO_HAND_SWORD MAGIC_SWORD BLUNT HAMMER ROD STAFF</type>
             </weapon>
         </conditions>
         <effects>
-            <physical-attack ignore-shield="true" over-hit="true">
+            <physical-attack defense-mod="0.8" ignore-shield="true" over-hit="true">
                 <power initial="465.0">
                     <value level="2">494.0</value>
                     <value level="3">525.0</value>
@@ -419,7 +417,7 @@
          -->
         <icon initial="icon.skill1609"/>
         <attributes magic-critical-rate="5.0">
-            <magic-level initial="46">
+            <magic-level initial="20">
                 <value level="2">58</value>
                 <value level="3">70</value>
                 <value level="4">82</value>
@@ -436,23 +434,20 @@
             </weapon>
         </conditions>
         <effects>
-			<effect name="MpConsumePerLevel" ticks="5">
-                <power initial="0.4"/>
-            </effect>
             <stat-modify stat="PHYSICAL_ATTACK">
                 <power initial="40.0">
                     <value level="2">50.0</value>
                     <value level="3">60.0</value>
                     <value level="4">90.0</value>
                 </power>
-                <weapon-type>SWORD TWO_HAND_SWORD</weapon-type>
+                <weapon-type>TWO_HAND_SWORD</weapon-type>
             </stat-modify>
             <stat-modify stat="ACCURACY">
                 <power initial="1.0">
                     <value level="2">2.0</value>
                     <value level="3">3.0</value>
                 </power>
-                <weapon-type>SWORD TWO_HAND_SWORD</weapon-type>
+                <weapon-type>TWO_HAND_SWORD</weapon-type>
             </stat-modify>
             <stat-modify stat="PHYSICAL_ATTACK_SPEED">
                 <power initial="30.0">
@@ -461,7 +456,10 @@
                     <value level="4">80.0</value>
                 </power>
                 <weapon-type>SWORD TWO_HAND_SWORD</weapon-type>
-            </stat-modify>           
+            </stat-modify>
+            <effect name="ManaDamOverTime" ticks="2">
+                <power initial="1"/>
+            </effect>
         </effects>
     </skill>
     <skill id="1610" name="Life Saver" max-level="29" action="A2" type="MAGIC">
@@ -1288,7 +1286,7 @@
     <skill id="1627" name="Destroyer's Roar" debuff="true" action="A2">
         <!-- Nearby targets' Movement Speed -90%%, and becomes inflicted with fear. Requires a sword, blunt weapon, or two-handed sword. -->
         <icon initial="icon.skill1627"/>
-        <attributes property="PHYSIC" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="DERANGEMENT" level-bonus-rate="20">
             <magic-level initial="77"/>
             <reuse initial="60000"/>
             <cool-time initial="500"/>
@@ -1303,7 +1301,7 @@
         <abnormal type="TURN_FLEE" visual="TURN_FLEE">
             <level initial="1"/>
             <time initial="7"/>
-            <chance initial="80"/>
+            <chance initial="40"/>
         </abnormal>
         <conditions>
             <weapon>

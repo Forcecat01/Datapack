@@ -891,7 +891,6 @@
             <effect-point initial="-844"/>
             <effect-range initial="1400"/>
             <hit-time initial="5000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -914,7 +913,6 @@
             <effect-point initial="-338"/>
             <effect-range initial="1000"/>
             <hit-time initial="5000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -966,7 +964,6 @@
             <effect-point initial="-331"/>
             <effect-range initial="1250"/>
             <hit-time initial="1500"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>

@@ -4,11 +4,11 @@
         <!-- For 30 seconds, reduces enemy's M. Atk. by 23%. -->
         <icon initial="icon.iconskill30517"/>
         <attributes property="PHYSIC" magic-critical-rate="5.0" level-bonus-rate="20" auto-use="ACTIVE">
-            <magic-level initial="49">
-                <value level="2">52</value>
-                <value level="3">55</value>
-                <value level="4">58</value>
-                <value level="5">60</value>
+            <magic-level initial="76">
+                <value level="2">78</value>
+                <value level="3">80</value>
+                <value level="4">82</value>
+                <value level="5">84</value>
             </magic-level>
             <cast-range initial="150"/>
             <reuse initial="2000"/>
@@ -50,8 +50,8 @@
         <icon initial="icon.skill0503"/>
         <attributes next-action="ATTACK" magic-critical-rate="5.0">
             <magic-level initial="43">
-                <value level="2">55</value>
-                <value level="3">64</value>
+                <value level="2">56</value>
+                <value level="3">70</value>
             </magic-level>
             <reuse initial="4000"/>
             <cool-time initial="720"/>
@@ -231,9 +231,9 @@
             <remain-status amount="80" lower="false" stat="CP"/>
         </conditions>
         <effects>
-            <cp mode="PER">
-                <power initial="-95.0"/>
-            </cp>
+            <cp mode="PER"> 
+            <power initial="-95.0"/> 
+			</cp> 
             <vital-stat-modify mode="PER" stat="MAX_HP" stat-add="MAX_HP">
                 <power initial="35.0"/>
             </vital-stat-modify>
@@ -820,7 +820,6 @@
                 <value level="4">-630</value>
             </effect-point>
             <hit-time initial="3000"/>
-
             <element type="EARTH" value="20"/>
         </attributes>
         <consume>
@@ -957,7 +956,6 @@
             </effect-point>
             <effect-range initial="400"/>
             <hit-time initial="1080"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
@@ -997,7 +995,6 @@
                 <value level="4">-630</value>
             </effect-point>
             <hit-time initial="1080"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
@@ -1046,7 +1043,6 @@
                 <value level="4">630</value>
             </effect-point>
             <hit-time initial="1000"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>

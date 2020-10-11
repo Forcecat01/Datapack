@@ -659,7 +659,6 @@
 			</effect-point>
 			<effect-range initial="1100"/>
 			<hit-time initial="1200"/>
-
 			<element type="WATER" value="20"/>
 		</attributes>
 		<consume>
@@ -3076,7 +3075,6 @@
 		<icon initial="icon.skill0196"/>
 		<attributes magic-critical-rate="5.0">
 			<magic-level initial="43"/>
-
 			<element type="HOLY"/>
 		</attributes>
 		<consume>

@@ -442,6 +442,7 @@
         <!-- Constructs an outpost that assists clan member recovery and reinforcement during territory battles. Territory Ward Transport is possible. Consumes 120 B-grade Gemstones. -->
         <icon initial="icon.skill0247"/>
         <attributes magic-critical-rate="5.0" hit-cancel-time="4.0">
+            <magic-level initial="-1"/>
             <reuse initial="600000"/>
             <hit-time initial="4000"/>
         </attributes>
@@ -459,6 +460,7 @@
         <!-- Demolishes an outpost. After demolition, a new outpost can be constructed. -->
         <icon initial="icon.skill0247"/>
         <attributes magic-critical-rate="5.0" hit-cancel-time="4.0">
+            <magic-level initial="-1"/>
             <reuse initial="600000"/>
             <effect-range initial="600"/>
             <hit-time initial="4000"/>
@@ -855,7 +857,6 @@
             </effect-point>
             <effect-range initial="1000"/>
             <hit-time initial="4000"/>
-
             <element type="FIRE" value="20"/>
         </attributes>
         <consume>
@@ -1137,7 +1138,6 @@
             <effect-point initial="-1"/>
             <effect-range initial="1250"/>
             <hit-time initial="4000"/>
-
             <element type="WIND" value="25"/>
         </attributes>
         <consume>
@@ -1182,7 +1182,6 @@
             <effect-point initial="-1"/>
             <effect-range initial="1250"/>
             <hit-time initial="4000"/>
-
             <element type="FIRE" value="25"/>
         </attributes>
         <consume>

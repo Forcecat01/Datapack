@@ -67,7 +67,7 @@
             level 2: For 5 minutes, Max HP + 35%% for all party members. Also increases MP Consumption when singing while song/dance is in effect.
          -->
 		<icon initial="icon.skill0304"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="66">
 				<value level="2">2</value>
 			</magic-level>
@@ -100,7 +100,7 @@
 	<skill id="305" name="Song of Vengeance" action="A2" type="DANCE">
 		<!-- For 5 minutes, gives a party member the ability to transfer 20%% of received damage back to the enemy. Additionally increases MP Consumption when singing while song/dance is in effect. -->
 		<icon initial="icon.skill0305"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="74"/>
 			<reuse initial="3000"/>
 			<effect-point initial="655"/>
@@ -123,7 +123,7 @@
 	<skill id="310" name="Dance of the Vampire" action="A2" type="DANCE">
 		<!-- For 5 minutes, grants the chance to recover physical damage inflicted on the enemy as 8%% HP to all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires a dualsword. -->
 		<icon initial="icon.skill0310"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="74"/>
 			<reuse initial="3000"/>
 			<effect-point initial="655"/>
@@ -154,7 +154,7 @@
             level 2: For 5 minutes, Damage Reflect Resistance +20%% for all party members. Also increases MP Consumption when dancing while song/dance is in effect. Requires dual swords.
          -->
 		<icon initial="icon.skill0311"/>
-		<attributes property="PHYSIC" magic-critical-rate="5.0" auto-use="BUFF">
+		<attributes property="PHYSIC" magic-critical-rate="5.0">
 			<magic-level initial="44">
 				<value level="2">66</value>
 			</magic-level>
@@ -350,7 +350,7 @@
 				<value level="8">8</value>
 				<value level="9">9</value>
 			</level>
-			<time initial="1200"/>
+			<time initial="120"/>
 		</abnormal>
 		<conditions>
 			<weapon>
@@ -626,6 +626,9 @@
 			</mana>
 		</consume>
 		<target type="NONE"/>
+		<abnormal type="IRON_SHIELD">
+			<time initial="-1"/>
+		</abnormal>
 		<effects>
 			<effect name="MpConsumePerLevel" ticks="5">
 				<power initial="0.8"/>
@@ -1087,10 +1090,10 @@
 			</physical-attack>
 			<stat-modify mode="PER" stat="PHYSICAL_DEFENCE">
 				<power initial="-30"/>
-			</stat-modify>
+			</stat-modify>	
 			<effect name="FocusMomentum" scope="SELF">
 				<power initial="8.0"/>
-			</effect>
+			</effect>		
 		</effects>
 	</skill>
 	<skill id="347" name="Earthquake" max-level="9" action="A1">
@@ -1130,7 +1133,6 @@
 				<value level="9">-400</value>
 			</effect-point>
 			<hit-time initial="1800"/>
-
 			<element type="EARTH" value="20"/>
 		</attributes>
 		<consume>
@@ -1279,11 +1281,6 @@
 					<value level="2">-25.0</value>
 				</power>
 			</reuse>
-			<reuse skill-type="MAGIC">
-                <power initial="-20.0">
-					<value level="2">-25.0</value>
-				</power>
-            </reuse>
 		</effects>
 	</skill>
 	<skill id="352" name="Shield Bash" max-level="10" debuff="true" action="A2">
@@ -1367,7 +1364,10 @@
 			</physical-attack>
 			<block-all-actions>
 				<allowed-skills>461 35016 35045</allowed-skills>
-			</block-all-actions>			
+			</block-all-actions>
+			<effect name="TargetCancel">
+				<power initial="80"/>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="353" name="Shield Slam" debuff="true" action="A2">
@@ -1388,7 +1388,7 @@
 		<abnormal type="SILENCE_PHYSICAL" visual="SILENCE">
 			<level initial="1"/>
 			<time initial="60"/>
-			<chance initial="60"/>
+			<chance initial="40"/>
 		</abnormal>
 		<conditions>
 			<condition name="EquipShield"/>
@@ -1457,13 +1457,13 @@
 			</weapon>
 		</conditions>
 		<effects>
-			<stat-modify mode="PER" stat="CRITICAL_RATE" stat-add="CRITICAL_RATE">
+			<stat-modify mode="PER" stat="CRITICAL_RATE">
 				<power initial="-20.0"/>
 			</stat-modify>
 			<stat-position-based position="FRONT" stat="CRITICAL_DAMAGE">
 				<power initial="-30.0"/>
 			</stat-position-based>
-			<stat-modify mode="PER" stat="BLOW_RATE" stat-add="BLOW_RATE">
+			<stat-modify mode="PER" stat="BLOW_RATE">
 				<power initial="40.0"/>
 			</stat-modify>
 			<stat-position-based position="BACK" stat="CRITICAL_DAMAGE">
@@ -1904,7 +1904,6 @@
 				<value level="3">-680</value>
 			</effect-point>
 			<hit-time initial="1500"/>
-
 			<element type="EARTH" value="20"/>
 		</attributes>
 		<consume>
@@ -2500,7 +2499,7 @@
 			<obtain-soul>
 				<power initial="2"/>
 			</obtain-soul>
-		</effects>
+		</effects>	
 	</skill>
 	<skill id="394" name="Shadow Soul Finding" action="A1">
 		<!-- Obtain 2 Shadow Souls. -->
@@ -2619,11 +2618,11 @@
 			<magic-level initial="1"/>
 		</attributes>
 		<target/>
-		<abnormal type="KAMAEL_SPECIAL" visual="WHITE_STANCE_AVE LONG_RAPIER_WHITE_AVE KAMAEL_WHITE_TRANSFORM">
+		<abnormal type="KAMAEL_SPECIAL" visual="WHITE_STANCE_AVE KAMAEL_WHITE_TRANSFORM LONG_RAPIER_WHITE_AVE">
+			<time initial="30"/>
 			<level initial="1">
 				<value level="2">2</value>
 			</level>
-			<time initial="30"/>
 		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK">
@@ -2685,11 +2684,11 @@
 			<magic-level initial="1"/>
 		</attributes>
 		<target/>
-		<abnormal type="KAMAEL_SPECIAL" visual="BLACK_STANCE_AVE LONG_RAPIER_BLACK_AVE KAMAEL_BLACK_TRANSFORM">
+		<abnormal type="KAMAEL_SPECIAL" visual="BLACK_STANCE_AVE KAMAEL_BLACK_TRANSFORM LONG_RAPIER_BLACK_AVE">
+			<time initial="60"/>
 			<level initial="1">
 				<value level="2">2</value>
 			</level>
-			<time initial="60"/>
 		</abnormal>
 		<effects>
 			<stat-modify stat="PHYSICAL_ATTACK">

@@ -820,7 +820,7 @@
                 <value level="37">33</value>
                 <value level="39">34</value>
             </mana-init>
-            <mana initial="39">
+             <mana initial="39">
                 <value level="2">42</value>
                 <value level="3">45</value>
                 <value level="4">48</value>
@@ -1533,7 +1533,6 @@
             </effect-point>
             <effect-range initial="900"/>
             <hit-time initial="4000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -1644,7 +1643,6 @@
             </effect-point>
             <effect-range initial="900"/>
             <hit-time initial="2000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -1911,7 +1909,7 @@
                         <value level="4">50</value>
                     </power>
                 </trait>
-                <trait type="HOLD">
+                <trait type="DERANGEMENT">
                     <power initial="20.0">
                         <value level="2">30.000001907348633</value>
                         <value level="3">40.0</value>
@@ -2154,7 +2152,6 @@
             <effect-point initial="243"/>
             <effect-range initial="900"/>
             <hit-time initial="4000"/>
-
             <element type="HOLY"/>
         </attributes>
         <consume>

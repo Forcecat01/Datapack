@@ -608,7 +608,6 @@
             </effect-point>
             <effect-range initial="1100"/>
             <hit-time initial="2000"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -800,7 +799,6 @@
             </effect-point>
             <effect-range initial="400"/>
             <hit-time initial="1080"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -834,7 +832,6 @@
             </effect-point>
             <effect-range initial="1200"/>
             <hit-time initial="2000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -868,7 +865,6 @@
             </effect-point>
             <effect-range initial="1200"/>
             <hit-time initial="2000"/>
-
             <element type="HOLY" value="20"/>
         </attributes>
         <consume>
@@ -1086,7 +1082,6 @@
             <effect-point initial="-100"/>
             <effect-range initial="1400"/>
             <hit-time initial="3300"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -1178,7 +1173,6 @@
             <reuse initial="11000"/>
             <effect-point initial="-342"/>
             <hit-time initial="3300"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -1202,7 +1196,6 @@
             <effect-point initial="-342"/>
             <effect-range initial="1400"/>
             <hit-time initial="3300"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -1414,7 +1407,6 @@
             <effect-point initial="-92"/>
             <effect-range initial="1100"/>
             <hit-time initial="1200"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -1453,7 +1445,6 @@
             </effect-point>
             <effect-range initial="1000"/>
             <hit-time initial="1800"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -1487,7 +1478,6 @@
             <reuse initial="5000"/>
             <effect-point initial="-275"/>
             <hit-time initial="1800"/>
-
             <element type="DARK" value="20"/>
         </attributes>
         <consume>
@@ -2133,7 +2123,7 @@
     <skill id="777" name="Demolition Impact" debuff="true" action="A2">
         <!-- Unleashes a shock of destruction to attack a frontal enemy with bonus 5980 Power. P. Def. -30%% and M. Def. -30%%. Requires a sword or blunt weapon. Critical. Over-hit. -->
         <icon initial="icon.skill0777"/>
-        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0"  trait="DEATH" auto-use="ACTIVE">
+        <attributes property="PHYSIC" next-action="ATTACK" magic-critical-rate="5.0" trait="DEATH" auto-use="ACTIVE">
             <magic-level initial="80"/>
             <cast-range initial="150"/>
             <reuse initial="75000"/>
